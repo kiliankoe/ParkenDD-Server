@@ -67,7 +67,7 @@ class parking_lots_dd
 			{
 				$state = parking_lots_dd::getStatusByImage($html[$i]);
 				$name = self::german_letters( self::extract_from_html_link( $html[$i] ));
-				
+				$forecast = file_exists('./forecast/'.$name.'.csv');	
 				$i++;
 				$i++;
 				$count = trim( strip_tags( $html[$i] ) );
@@ -76,7 +76,7 @@ class parking_lots_dd
 				$free = trim( strip_tags( $html[$i] ) );
 				$llat = $lat[$name];
 				$llon = $lon[$name];				
-				$table['lots'][] = array( 'name'=>$name, 'count'=>$count, 'free'=>$free, 'state'=>$state, 'lat'=>$llat, 'lon'=>$llon );
+				$table['lots'][] = array( 'name'=>$name, 'count'=>$count, 'free'=>$free, 'state'=>$state, 'lat'=>$llat, 'lon'=>$llon, 'forecast'=>$forecast );
 			}
 			
 			
