@@ -4,7 +4,7 @@ parse_str(implode('&', array_slice($argv, 1)), $_GET); //cli-only
 
 $spot = $_GET['spot'];
 
-if($spot == "centrumgallerie"){
+if($spot === "centrumgallerie"){
 	$csv = file_get_contents($spot.'.csv');
 	$date = $_GET['date'];
 	$pattern = "/^.*$date.*\$/m";
