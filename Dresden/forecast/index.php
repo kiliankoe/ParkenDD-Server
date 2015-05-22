@@ -1,6 +1,6 @@
 <?php
 
-parse_str(implode('&', array_slice($argv, 1)), $_GET); //cli-only
+//parse_str(implode('&', array_slice($argv, 1)), $_GET); //cli-only
 
 $spot = $_GET['spot'];
 $csv = file_get_contents($spot.'.csv');
