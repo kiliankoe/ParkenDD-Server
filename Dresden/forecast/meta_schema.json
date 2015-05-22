@@ -1,0 +1,11 @@
+{
+	"$schema":"http://jkliemann.de/parkendd/media/forecast_meta_schema.json",
+	"title":"ParkenDD JSon API",
+	"description":"JSon forecast meta information required by ParkenDD app",
+	"type":"Array",
+	"items":{
+		"description":"list of available forecasts",
+		"type":"string"
+	}
+}
+
