@@ -40,7 +40,7 @@
 						"lon":{
 							"description":"longitude of the parking lot",
 							"type":"string"
-						}
+						},
 						"forecast":{
 							"description":"shows if forecast is available for this spot",
 							"type":"boolean"
