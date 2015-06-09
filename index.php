@@ -4,9 +4,21 @@ $city = $_GET['city'];
 
 function getmeta(){
 	$cities = array_values(array_filter(glob('*'), 'is_dir'));
-	$mail = "jklmnn@web.de";
+	$mail = ""; //servers mail address
 	$meta = array('mail' => $mail, 'cities' => $cities);
 	return $meta;
+}
+
+function send($msg){
+	$header =  "From:  \r\n X-Mailer: PHP/".phpversion(); // mail sender and xmailer
+	$title = ""; // mail title
+	$to = ""; // servers mail address
+	mail($to, $title, $msg, $header);
+}
+
+if(isset($_POST['msg'])){
+	send($_POST['msg']);
+	exit(0);
 }
 
 if($city === "Dresden"){
