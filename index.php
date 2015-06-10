@@ -13,7 +13,9 @@ function send($msg){
 	$header =  "From:  \r\n X-Mailer: PHP/".phpversion(); // mail sender and xmailer
 	$title = ""; // mail title
 	$to = ""; // servers mail address
-	mail($to, $title, $msg, $header);
+	$body = htmlspecialchars($msg, ENT_QUOTES);
+	mail($to, $title, $body, $header);
+
 }
 
 if(isset($_POST['msg'])){
