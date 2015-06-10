@@ -10,8 +10,8 @@ function getmeta(){
 }
 
 function send($msg){
-	$header =  "From:  \r\n X-Mailer: PHP/".phpversion(); // mail sender and xmailer
-	$title = ""; // mail title
+	$header =  "From: ParkenDD\r\nX-Mailer: PHP/".phpversion(); // mail sender and xmailer
+	$title = "ParkenDD"; // mail title
 	$to = ""; // servers mail address
 	$body = htmlspecialchars($msg, ENT_QUOTES);
 	mail($to, $title, $body, $header);
