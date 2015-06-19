@@ -46,7 +46,7 @@
 							"type":"boolean"
 						}
 					},
-					"required":["name", "count", "state"]
+					"required":["name", "count", "state", "forecast"]
 				}
 			}
 		},
